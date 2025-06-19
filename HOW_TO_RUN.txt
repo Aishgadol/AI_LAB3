@@ -1,0 +1,50 @@
+Files to run in LAB 3:
+
+	- Ackley_Solver.exe
+	- CVRP_Solver
+
+Some algorithm have time limit defaults so if you don't write time limit they will run until the time limit default is over.
+
+To run Ackley:
+
+	Ackley_Solver.exe <Algorithm name> <time_limit=>
+
+
+		Algorithm name : MSH | ILS | BB | ALNS | GA
+
+	example :
+						Ackley_Solver.exe MSH
+	with time limit :
+						Ackley_Solver.exe ILS time_limit=2
+
+To run CVRP_Solver:
+
+	CVRP_Solver.exe <Algorithm name> <problem path> <time limit>
+
+
+		Algorithm name : MSH | ILS | BB | ALNS | GA
+
+	example:
+						CVRP_Solver.exe ILS ./problems/intermediate/A-n32-k5.vrp
+	With time limit:
+
+	                    CVRP_Solver.exe ILS ./problems/intermediate/A-n32-k5.vrp 2
+
+	To run all problems in a chosen difficulty setting  :
+
+						CVRP_Solver.exe GA problems/intermediate
+
+Problems are in the Problems folder sorted by difficulty :
+problems/
+├── beginner/
+│   ├── E-n22-k4.vrp
+│   ├── P-n16-k8.vrp
+│   └── ... (other .sol files)
+├── intermediate/
+│   ├── A-n32-k5.vrp
+│   ├── A-n80-k10.vrp
+│   └── ... (other .sol files)
+├── advanced/
+│   ├── M-n200-k17.vrp
+│   ├── X-n101-k26.vrp
+│   └── ... (other .sol files)
