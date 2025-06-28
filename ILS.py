@@ -77,7 +77,7 @@ def L(s, coordinates, demands, capacity): # check if the solution is legal
     cap = validate_routes_capacity(s, coordinates, demands, capacity)
     routes = validate_routes_cities(s, coordinates, demands, capacity)
     return cap and routes
-
+#i think this part should be lower in the code
 def S(nbrs, coordinates, demands, capacity): # select the best legal neighbor
     legal_neighbors = [n for n in nbrs if L(n, coordinates, demands, capacity)]
     return min(legal_neighbors, key=lambda x: f(x, coordinates)) if legal_neighbors else None
@@ -666,7 +666,7 @@ def tabu_search(coordinates, demands, capacity, num_nodes, time_limit, max_searc
 def aco(coordinates, demands, capacity, num_nodes, time_limit, max_searches):
     import time
     start_time = time.time()
-
+#i think this part should be higher in the code
     # Initial solution
     current_solution = generate_initial_solution(coordinates, demands, capacity, num_nodes)
     if num_nodes <=80:
